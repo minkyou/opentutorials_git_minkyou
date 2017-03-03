@@ -29,6 +29,7 @@ public class Supply extends Thread {
 	
 	public synchronized void buy() {
 		Thread t = Thread.currentThread();
+		
 		while(bread == 0) {
 			System.out.println("»§ ´Ù ÆÈ¸²");
 			System.out.println("waitµÈ ¾²·¹µå : " + t.getName());
@@ -41,6 +42,7 @@ public class Supply extends Thread {
 				e.printStackTrace();
 			}
 		}
+		
 		bread -= 1;
 		System.out.println(t.getName() + " " + i + " ¹øÂ° »§ ÆÈ¸²");
 		i++;
