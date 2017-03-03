@@ -28,6 +28,7 @@ public class Supply extends Thread {
 	}
 	
 	public synchronized void buy() {
+		
 		Thread t = Thread.currentThread();
 		
 		while(bread == 0) {
